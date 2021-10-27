@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Diabetes Predictor</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Crop Recommendation</span></h2> 
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction == "rice" %}
+				<h1>Prediction: <span class='Rice'> You have choosen Rice.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='rice.jpg') }}" alt="Rice Image">
+			{% elif prediction == "maize" %}
+				<h1>Prediction: <span class='Maize'>You have choosen Maize.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='maize.jfif') }}" alt="Maize Image">
+			{% elif prediction == "chickpea" %}
+				<h1>Prediction: <span class='Maize'>You have choosen chickpea.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='chickpea.jfif') }}" alt="chickpea Image">
+			{% elif prediction == "kidneybeans" %}
+				<h1>Prediction: <span class='kidneybeans'>You have choosen kidneybeans.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='chickpea.jfif') }}" alt="kidneybeans Image">		
+			{% elif prediction == "pigeonpeas" %}
+				<h1>Prediction: <span class='pigeonpeas'>You have choosen pigeonpeas.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='pigeonpeas.jfif') }}" alt="pigeonpeas Image">	
+			{% elif prediction == "mothbeans" %}
+				<h1>Prediction: <span class='mothbeans'>You have choosen mothbeans.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='mothbeans.jfif') }}" alt="mothbeans Image">		
+			{% elif prediction == "mungbean" %}
+				<h1>Prediction: <span class='mungbean'>You have choosen mungbean.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='mungbean.jfif') }}" alt="mungbeans Image">
+			{% elif prediction == "lentil" %}
+				<h1>Prediction: <span class='lentil'>You have choosen lentil.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='lentil.jpg') }}" alt="lentil Image">
+			{% elif prediction == "pomegranate" %}
+				<h1>Prediction: <span class='pomegranate'>You have choosen pomegranate.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='pomegranate.jfif') }}" alt="pomegranate Image">
+			{% elif prediction == "banana" %}
+				<h1>Prediction: <span class='banana'>You have choosen banana.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='banana.jfif') }}" alt="banana Image">
+			{% elif prediction == "banana" %}
+				<h1>Prediction: <span class='banana'>You have choosen banana.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='banana.jfif') }}" alt="banana Image">	
+			{% elif prediction == "mango" %}
+				<h1>Prediction: <span class='mango'>You have choosen manogo.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='mango.jfif') }}" alt="mango Image">
+			{% elif prediction == "grapes" %}
+				<h1>Prediction: <span class='grapes'>You have choosen grapes.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='grapes.jfif') }}" alt="grapes Image">
+			{% elif prediction == "watermelon" %}
+				<h1>Prediction: <span class='watermelon'>You have choosen watermelon.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='watermelon.jfif') }}" alt="watermelon Image">
+			{% elif prediction == "muskmelon" %}
+				<h1>Prediction: <span class='muskmelon'>You have choosen muskmelon.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='muskmelon.jfif') }}" alt="muskmelon Image">
+			{% elif prediction == "apple" %}
+				<h1>Prediction: <span class='apple'>You have choosen apple.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='apple.jfif') }}" alt="apple Image">
+			{% elif prediction == "orange" %}
+				<h1>Prediction: <span class='orange'>You have choosen orange.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='orange.jfif') }}" alt="orange Image">
+			{% elif prediction == "papaya" %}
+				<h1>Prediction: <span class='papaya'>You have choosen papaya.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='papaya.jfif') }}" alt="papaya Image">
+			{% elif prediction == "coconut" %}
+				<h1>Prediction: <span class='coconut'>You have choosen coconut.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='coconut.jfif') }}" alt="coconut Image">
+			{% elif prediction == "cotton" %}
+				<h1>Prediction: <span class='cotton'>You have choosen cotton.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='cotton.jfif') }}" alt="cotton Image">	
+			{% elif prediction == "jute" %}
+				<h1>Prediction: <span class='jute'>You have choosen jute.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='jute.jfif') }}" alt="jute Image">
+			{% elif prediction == "coffee" %}
+				<h1>Prediction: <span class='coffee'>You have choosen coffee.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='coffee.jfif') }}" alt="coffee Image">
+						
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/Balajichandra/Crop-Recomendation"><i class="fab fa-github fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by Balaji C.</p>
+       </div>
+
+	</body>
+</html>

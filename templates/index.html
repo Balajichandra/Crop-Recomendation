@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Crop Recommendation</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="N" placeholder="ratio of Nitrogen content in soil"><br>
+                <input class="form-input" type="text" name="P" placeholder="ratio of Phosphorous content in soil"><br>
+                <input class="form-input" type="text" name="K" placeholder="ratio of Potassium content in soil"><br>
+                <input class="form-input" type="text" name="temperature" placeholder="temperature in degree Celsius"><br>
+                <input class="form-input" type="text" name="humidity" placeholder="relative humidity in %"><br>
+                <input class="form-input" type="text" name="ph" placeholder="ph value of the soil"><br>
+                <input class="form-input" type="text" name="rainfall" placeholder="rainfall in mm"><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/Balajichandra/Crop-Recomendation"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               
+           </div>
+           <p class='footer-description'>Made with ❤️ by Balaji C.</p>
+       </div>
+
+    </body>
+</html>
