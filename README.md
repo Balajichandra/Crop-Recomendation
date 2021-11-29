@@ -39,13 +39,16 @@ Live Demo: https://ml-crop-classification.herokuapp.com/
 
 ![](https://i.imgur.com/TnsSPQy.png)
 # Predict
-1.data = np.array([[104,18, 30, 23.603016, 60.3, 6.7, 140.91]])
+data = np.array([[104,18, 30, 23.603016, 60.3, 6.7, 140.91]])
 prediction = RF.predict(data)
 print(prediction)
----> ['coffee']
-2.data = np.array([[83, 45, 60, 28, 70.3, 7.0, 150.9]])
+# output
+['coffee']
+# Predict
+data = np.array([[83, 45, 60, 28, 70.3, 7.0, 150.9]])
 prediction = RF.predict(data)
 print(prediction)
----> ['jute']
+# Output
+['jute']
 # References
 * https://www.kaggle.com/atharvaingle/crop-recommendation-dataset
